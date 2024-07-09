@@ -1,0 +1,98 @@
+[
+    {
+        "id": "f4fba11899371ab1",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "907f33793b1aa25a",
+        "type": "postgreSQLConfig",
+        "name": "Heroku PQSL",
+        "host": "cav8p52l9arddb.cluster-czz5s0kz4scl.eu-west-1.rds.amazonaws.com",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "d5molm28oll9eb",
+        "databaseFieldType": "str",
+        "ssl": "true",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": "10",
+        "maxFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "u4ie6c70j4s2o7",
+        "userFieldType": "str",
+        "password": "pac821e23bfe730b9ab33879d93da5499603b0e43a50958c9724a9ebfd1007162",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "aea6cdc7554c341b",
+        "type": "postgresql",
+        "z": "f4fba11899371ab1",
+        "name": "",
+        "query": "SELECT * FROM countries;",
+        "postgreSQLConfig": "907f33793b1aa25a",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 330,
+        "y": 160,
+        "wires": [
+            [
+                "96b6900555c8f407"
+            ]
+        ]
+    },
+    {
+        "id": "caba4788529844da",
+        "type": "inject",
+        "z": "f4fba11899371ab1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 160,
+        "wires": [
+            [
+                "aea6cdc7554c341b"
+            ]
+        ]
+    },
+    {
+        "id": "96b6900555c8f407",
+        "type": "debug",
+        "z": "f4fba11899371ab1",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 160,
+        "wires": []
+    }
+]
