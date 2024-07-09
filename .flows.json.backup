@@ -17,7 +17,7 @@
         "portFieldType": "num",
         "database": "d5molm28oll9eb",
         "databaseFieldType": "str",
-        "ssl": "false",
+        "ssl": "true",
         "sslFieldType": "bool",
         "applicationName": "",
         "applicationNameType": "str",
@@ -94,5 +94,32 @@
         "x": 520,
         "y": 160,
         "wires": []
+    },
+    {
+        "id": "29872bed8a570c77",
+        "type": "inject",
+        "z": "f4fba11899371ab1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 60,
+        "wires": [
+            []
+        ]
     }
 ]
