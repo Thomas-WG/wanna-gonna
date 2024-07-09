@@ -1,1 +1,1 @@
-web: npm start -- --settings settings.js
+npm start -- --settings settings.js
